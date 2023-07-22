@@ -1,4 +1,5 @@
 # NgajiQuran
+![image](https://raw.githubusercontent.com/SeptiawanAjiP/NgajiQuran/master/image.png)
 
 NgajiQuran is a library for getting Surah & Ayah Data of Al-Quran. This API data source comes from [quran.kemenag.go.id](https://quran.kemenag.go.id)
 
@@ -20,18 +21,18 @@ dependencies {
 	 implementation 'com.github.SeptiawanAjiP:NgajiQuran:Tag'
 }
 ```
-replace Tag with the version
+replace Tag with the version. Don't forget to add internet permission on your AndroidManifest
 
 ## Usage
 
 ```kotlin
 NgajiQuran.getListSurah { listSurah ->
-   Log.d("SURAH SIZE", ""+listSurah!!.size)
+    Log.d("SURAH SIZE", ""+listSurah!!.size)
 }
 
 // set surah id as a parameter
 NgajiQuran.getListAyahBySurahId(1) {
-            listAyah ->
-   Log.d("AYAH SIZE ", ""+listAyah!!.size)
+        listAyah ->
+    Log.d("AYAH SIZE ", ""+listAyah!!.size)
 }
 ```
